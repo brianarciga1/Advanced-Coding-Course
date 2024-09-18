@@ -1,10 +1,6 @@
-Here’s the revised lab manual for performing Git operations using the MacBook terminal instead of Xcode:
+**Lab Manual: GitHub Integration and Git Basics on MacBook Terminal**
 
----
-
-## **Lab Manual: GitHub Integration and Git Basics on MacBook Terminal**
-
-### **Objective:**
+**Objective:**
 Learn how to use the MacBook terminal to integrate GitHub with your local projects, make commits and pushes, create and manage branches, and handle authentication using a Personal Access Token (PAT).
 
 ### **Requirements:**
