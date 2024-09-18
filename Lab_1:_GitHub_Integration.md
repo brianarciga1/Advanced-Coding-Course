@@ -102,9 +102,9 @@ Password for 'https://github.com': Instead of your GitHub password, you must ent
    vim hello_world.swift
    ```
 
-2. Inside **vim**, press `i` to enter insert mode":
+2. Inside **vim**, press `i` to enter insert mode:
 
-3. Let's change it up a bit, create a loop that prints "hello world" 10 times!
+3. Hello world is too easy so lets spice it up a bit, create a loop that prints "hello world" 10 times!
 
 4. Once you've finished typing, press `Esc` to exit insert mode.
 
