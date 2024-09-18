@@ -98,11 +98,9 @@ Receiving objects: 100% (3/3), done.
    vim hello_world.swift
    ```
 
-2. Inside **vim**, press `i` to enter insert mode, and then type the following Swift code to print "Hello, World!":
+2. Inside **vim**, press `i` to enter insert mode":
 
-   ```swift
-   print("Hello, World!")
-   ```
+3. Let's change it up a bit, create a loop that prints "hello world" 10 times!
 
 4. Once you've finished typing, press `Esc` to exit insert mode.
 
