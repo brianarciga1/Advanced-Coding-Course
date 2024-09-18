@@ -76,11 +76,11 @@ Password for 'https://github.com': Instead of your GitHub password, you must ent
    - You should see output similar to this:
      ```bash
      Cloning into 'Your-Repository'...
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Compressing objects: 100% (2/2), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-Receiving objects: 100% (3/3), done.
+     remote: Enumerating objects: 3, done.
+     remote: Counting objects: 100% (3/3), done.
+     remote: Compressing objects: 100% (2/2), done.
+     remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+     Receiving objects: 100% (3/3), done.
      ```
    - Type in the command
      ```bash
