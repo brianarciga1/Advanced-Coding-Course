@@ -1,11 +1,15 @@
 ### **Lab Manual: GitHub Integration and Git Basics on MacBook Terminal**
 
 ### **Objective:**
-Learn how to use the MacBook terminal to integrate GitHub with your local projects, make commits and pushes, create and manage branches, and handle authentication using a Personal Access Token (PAT).
+By the end of this lab, you will:
+
+Clone a GitHub repository to your terminal.
+Create a simple "Hello World" program in Swift.
+Push the program back to the GitHub repository.
 
 ### **Requirements:**
 - GitHub account
-- Git installed on your Mac
+- Xcode installed on your Mac
 
 ---
 
