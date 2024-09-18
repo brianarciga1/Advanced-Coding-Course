@@ -38,147 +38,135 @@ Learn how to use the MacBook terminal to integrate GitHub with your local projec
    mkdir AdvancedCoding
    cd AdvancedCoding
    ```
-3. **Enter Previously Created Class folder:**
+3. **Test GitHub Connection:**
    Now since we have Xcode on these laptops they should already have the git packages we need to run our git commands. To check your git version run the following command:
    ```bash
    git --version
    ```
    You should see something like this:
    ```bash
-   git version 2.39.2 (Apple Git-143)
+   git version 2.39.3 (Apple Git-146)
    ```
+   If not, make sure you have Xcode downloaded. If you still don't see it please let me know!
    
-. **Test GitHub Connection:**
-   - Run the following command to check your GitHub connection:
-     ```bash
-     git config --global user.name "Your GitHub Username"
-     git config --global user.email "your_email@example.com"
-     ```
-
 ---
 
-### **2. **Creating a New Repository and Linking It with GitHub**
+### **2. Cloning Your Repository**
 
-#### **Step 1: Initialize a Git Repository**
+#### **CLONE your Advanced Coding Repository from GitHub**
 
-1. **Navigate to Your Project Directory:**
-   - Use the `cd` command to move into your project directory:
+1. **Navigate to your Class Repository:**
+   - Go to github and open up your Advanced Coding Repository (The one you created for the class)
+   - Click the green <>Code button
+   - Copy your HTTPS URL
+
+2. **Navigate back to your Terminal:**
+   - Enter the following code using your https url:
      ```bash
-     cd /path/to/your/project
+     git clone https://github.com/your-username/you-repository.git
      ```
+   - Since this is your first time logging in via the terminal, you will be prompted to authenticate:
+Username for 'https://github.com': Enter your GitHub username or email.
+Password for 'https://github.com': Instead of your GitHub password, you must enter a Personal Access Token (PAT) from earlier
 
-2. **Initialize the Repository:**
-   - Initialize the project directory as a Git repository:
+   - You should see output similar to this:
      ```bash
-     git init
+     Cloning into 'Your-Repository'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
      ```
-
-#### **Step 2: Add a Remote Repository**
-
-1. **Link Your Local Repository to GitHub:**
-   - Add the remote repository URL (replace `<remote-repository-URL>` with your GitHub repository URL):
+   - Type in the command
      ```bash
-     git remote add origin <remote-repository-URL>
+        ls
      ```
-
+     and you should see the name of your newly created repository directory
+   - Change into your newly created directory
+     ```bash
+        cd Your-Repository
+     ```
 ---
 
-### **3. **Making Commits and Pushes**
+### **3: Creating and Pushing a "Hello World" Program**
 
-#### **Step 1: Stage Changes**
+#### Step 1: Create a "Hello World" Program
+1. Yes, I know, not another hello world. In the terminal, create and open a new Swift file called `hello_world.swift`:
 
-1. **Check the Status of Your Repository:**
-   - View the status of your working directory:
-     ```bash
-     git status
-     ```
+   ```bash
+   vim hello_world.swift
+   ```
 
-2. **Add Files to the Staging Area:**
-   - Stage all changes for commit:
-     ```bash
-     git add .
-     ```
-   - Alternatively, specify individual files to add.
+2. Inside **vim**, press `i` to enter insert mode, and then type the following Swift code to print "Hello, World!":
 
-#### **Step 2: Commit Changes**
+   ```swift
+   print("Hello, World!")
+   ```
 
-1. **Commit the Staged Changes:**
-   - Commit your changes with a descriptive message:
-     ```bash
-     git commit -m "Your commit message"
-     ```
+4. Once you've finished typing, press `Esc` to exit insert mode.
 
-#### **Step 3: Push Changes to GitHub**
+5. To save and quit **vim**, type `:wq` and press **Enter**.
 
-1. **Push to the Remote Repository:**
-   - Push your committed changes to the GitHub repository:
-     ```bash
-     git push origin main
-     ```
-   - Replace `main` with the branch name if different.
+#### Step 2: Add and Commit Your Changes
+1. Add the new Swift file to the staging area:
 
+   ```bash
+   git add hello_world.swift
+   ```
+
+2. Commit the changes with a message:
+
+   ```bash
+   git commit -m "Added hello_world.swift program"
+   ```
+
+3. The terminal should show:
+
+   ```bash
+   [main 1a2b3c4] Added hello_world.swift program
+    1 file changed, 1 insertion(+)
+    create mode 100644 hello_world.swift
+   ```
+
+#### Step 3: Push Your Code to GitHub
+1. Push the changes to your GitHub repository:
+
+   ```bash
+   git push origin main
+   ```
+
+2. You might be prompted for your GitHub username and **Personal Access Token** again if it's your first time pushing:
+
+   ```bash
+   Username for 'https://github.com': <enter your username>
+   Password for 'https://github.com': <enter your PAT>
+   ```
+
+3. After successfully pushing, the terminal will output something like:
+
+   ```bash
+   Enumerating objects: 5, done.
+   Counting objects: 100% (5/5), done.
+   Delta compression using up to 8 threads
+   Compressing objects: 100% (3/3), done.
+   Writing objects: 100% (3/3), 380 bytes | 380.00 KiB/s, done.
+   Total 3 (delta 1), reused 0 (delta 0)
+   To https://github.com/your-username/hello-world-swift.git
+      1a2b3c4..5d6e7f8  main -> main
+   ```
 ---
 
-### **4. **Creating and Managing Branches**
+### **4: Verifying Your Changes on GitHub**
 
-#### **Step 1: Create a New Branch**
-
-1. **Create and Switch to a New Branch:**
-   - Create a new branch and switch to it:
-     ```bash
-     git checkout -b new-branch-name
-     ```
-
-#### **Step 2: Switch Between Branches**
-
-1. **List All Branches:**
-   - View all existing branches in the repository:
-     ```bash
-     git branch
-     ```
-
-2. **Switch to a Different Branch:**
-   - Change to another branch:
-     ```bash
-     git checkout branch-name
-     ```
-
-#### **Step 3: Merge Branches**
-
-1. **Merge Changes from Another Branch:**
-   - Switch to the branch you want to merge changes into:
-     ```bash
-     git checkout main
-     ```
-   - Merge the other branch into it:
-     ```bash
-     git merge branch-name
-     ```
-
+1. Go to your repository on GitHub.
+2. You should see your `hello_world.swift` file in the repository, with your commit message.
+3. Click on the file to verify that it contains the "Hello, World!" code.
+4. At this point call me over to confirm that you pushed your code.
 ---
 
-### **5. **Handling Authentication Issues**
+### Lab Completion
 
-#### **If You Encounter Authentication Errors:**
-
-1. **Clear Cached Credentials from Keychain:**
-   - Open **Keychain Access** (found in Applications > Utilities).
-   - Search for and delete any items related to Git or GitHub.
-
-2. **Re-authenticate with Your PAT:**
-   - When pushing or pulling, enter your GitHub username and use the PAT as your password when prompted.
-
-3. **Switch to SSH (Optional):**
-   - If you prefer using SSH over HTTPS, generate an SSH key, add it to your GitHub account, and update your remote URL to use SSH.
+Congrats!! You have successfully cloned a GitHub repository, created a "Hello World" program in Swift using **vim**, and pushed it back to GitHub. 🎉
 
 ---
-
-### **Conclusion**
-
-By following this lab manual, you should now be able to integrate GitHub with your local projects using the MacBook terminal, manage commits and pushes, create and manage branches, and handle authentication using a PAT.
-
-If you encounter any issues or have questions, please ask for further assistance.
-
---- 
-
-This guide should cover everything your students need to work with GitHub from the terminal on their MacBooks! Let me know if you need any further adjustments.
