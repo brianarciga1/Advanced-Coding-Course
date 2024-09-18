@@ -13,7 +13,7 @@ Push the program back to the GitHub repository.
 
 ---
 
-### **1. **Setting Up GitHub Integration with the Terminal**
+### **1. Setting Up GitHub Integration with the Terminal**
 
 #### **Step 1: Generate a Personal Access Token (PAT)**
 
