@@ -24,7 +24,7 @@ Push the program back to the GitHub repository.
    - Navigate to [GitHub Settings](https://github.com/settings/tokens).
    - Click on **"Generate new token."**
    - Select the scopes or permissions you need (e.g., `repo` for full control of private repositories), and generate the token.
-   - **Copy the PAT** as you will need it later for authentication so make sure to **SAVE IT **
+   - **Copy the PAT** as you will need it later for authentication so make sure to **SAVE IT**
 
 #### **Step 2: Configure Git to Use the PAT**
 
