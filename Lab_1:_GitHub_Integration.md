@@ -1,6 +1,6 @@
-**Lab Manual: GitHub Integration and Git Basics on MacBook Terminal**
+### **Lab Manual: GitHub Integration and Git Basics on MacBook Terminal**
 
-**Objective:**
+### **Objective:**
 Learn how to use the MacBook terminal to integrate GitHub with your local projects, make commits and pushes, create and manage branches, and handle authentication using a Personal Access Token (PAT).
 
 ### **Requirements:**
@@ -16,24 +16,39 @@ Learn how to use the MacBook terminal to integrate GitHub with your local projec
 1. **Log in to GitHub:**
    Go to [GitHub](https://github.com/) and log in to your account.
 
-2. **Generate a PAT:**
+2. **Generate a Personal access token (PAT):**
    - Navigate to [GitHub Settings](https://github.com/settings/tokens).
    - Click on **"Generate new token."**
-   - Give your token a descriptive name, select the scopes or permissions you need (e.g., `repo` for full control of private repositories), and generate the token.
-   - **Copy the PAT** as you will need it later for authentication.
+   - Select the scopes or permissions you need (e.g., `repo` for full control of private repositories), and generate the token.
+   - **Copy the PAT** as you will need it later for authentication so make sure to **SAVE IT **
 
 #### **Step 2: Configure Git to Use the PAT**
 
 1. **Open Terminal:**
-   Launch the Terminal app on your Mac.
+   Launch the Terminal app on your Mac
 
-2. **Set Up Credential Helper:**
-   Configure Git to use macOS’s Keychain Access to store your credentials:
+2. **Enter Previously Created Class folder:**
+   Open up your previously created AdvancedCoding directory.
    ```bash
-   git config --global credential.helper osxkeychain
+   cd AdvancedCoding
    ```
 
-3. **Test GitHub Connection:**
+   If you have not already created one, create one then change into it.
+   ```bash
+   mkdir AdvancedCoding
+   cd AdvancedCoding
+   ```
+3. **Enter Previously Created Class folder:**
+   Now since we have Xcode on these laptops they should already have the git packages we need to run our git commands. To check your git version run the following command:
+   ```bash
+   git --version
+   ```
+   You should see something like this:
+   ```bash
+   git version 2.39.2 (Apple Git-143)
+   ```
+   
+. **Test GitHub Connection:**
    - Run the following command to check your GitHub connection:
      ```bash
      git config --global user.name "Your GitHub Username"
