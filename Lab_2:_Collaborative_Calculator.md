@@ -56,10 +56,11 @@ The program will allow users to select an operation (add, subtract, multiply, di
 
 ### **Step 1: Common Code (Main Menu)**
 
-Each partner needs to add the following code to display the menu and handle user inputs in their `calculator.swift` file:
+Each team needs to include the following code to display the menu in their `calculator.swift` file:
 ```swift
 import Foundation
 
+// Menu function to display options to the user
 func showMenu() {
     print("""
     Select an operation:
@@ -72,25 +73,14 @@ func showMenu() {
     """)
 }
 
-func getNumbers() -> (Double, Double)? {
-    print("Enter two numbers:")
-    if let num1 = Double(readLine() ?? ""), let num2 = Double(readLine() ?? "") {
-        return (num1, num2)
-    } else {
-        print("Invalid input.")
-        return nil
-    }
-}
+showMenu() //displays menu
 
-showMenu()
-if let choice = readLine(), let operation = Int(choice), let (num1, num2) = getNumbers() {
-    switch operation {
-    // Insert individual functions for each branch
-    default:
-        print("Invalid choice.")
-    }
-}
 ```
+
+The code should prompt users to enter their two numbers like this:
+<img width="1048" alt="image" src="https://github.com/user-attachments/assets/dc5c0a21-935d-40a4-9baa-eb585729180e">
+
+
 
 ### **Step 2: Partner 1 - Addition and Subtraction**
 1. On your branch, implement the **addition** and **subtraction** functions:
