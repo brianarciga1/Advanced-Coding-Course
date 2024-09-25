@@ -78,8 +78,25 @@ showMenu() //displays menu
 ```
 
 The code should prompt users to enter their two numbers like this:
-<img width="1048" alt="image" src="https://github.com/user-attachments/assets/dc5c0a21-935d-40a4-9baa-eb585729180e">
+/////
+## Output
+```
+Select an operation:
+1: Add
+2: Subtract
+3: Multiply
+4: Divide
+5: Exponent
+6: Remainder
 
+1 //user entered operation 1
+
+Please enter your two numbers:
+2
+3
+
+Result: 5.0
+```
 
 
 ### **Step 2: Partner 1 - Addition and Subtraction**
