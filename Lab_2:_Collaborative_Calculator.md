@@ -54,7 +54,7 @@ In this lab, your group will:
 ### **Calculator Requirements**
 The program will allow users to select an operation (add, subtract, multiply, divide, exponent, remainder) and then enter two numbers. Based on the operation chosen, it will perform the calculation and return the result.
 
-### **Step 1: Common Code (Main Menu)**
+### **Common Code (Main Menu)**
 
 Each team needs to include the following code to display the menu in their `calculator.swift` file:
 ```swift
@@ -78,7 +78,6 @@ showMenu() //displays menu
 ```
 
 The code should prompt users to enter their two numbers like this:
-/////
 ## Output
 ```
 Select an operation:
@@ -97,80 +96,21 @@ Please enter your two numbers:
 
 Result: 5.0
 ```
+The code should also account for invalid input:
+## Output
+```
+Select an operation:
+1: Add
+2: Subtract
+3: Multiply
+4: Divide
+5: Exponent
+6: Remainder
 
+a //user entered operation 
 
-### **Step 2: Partner 1 - Addition and Subtraction**
-1. On your branch, implement the **addition** and **subtraction** functions:
-   ```swift
-   func add(_ a: Double, _ b: Double) -> Double {
-       return a + b
-   }
-
-   func subtract(_ a: Double, _ b: Double) -> Double {
-       return a - b
-   }
-
-   // In the switch statement:
-   case 1:
-       print("Result: \(add(num1, num2))")
-   case 2:
-       print("Result: \(subtract(num1, num2))")
-   ```
-2. Commit your changes:
-   ```bash
-   git add calculator.swift
-   git commit -m "Added addition and subtraction functions"
-   ```
-
-### **Step 3: Partner 2 - Multiplication and Division**
-1. On your branch, implement the **multiplication** and **division** functions:
-   ```swift
-   func multiply(_ a: Double, _ b: Double) -> Double {
-       return a * b
-   }
-
-   func divide(_ a: Double, _ b: Double) -> Double {
-       guard b != 0 else {
-           print("Cannot divide by zero!")
-           return 0
-       }
-       return a / b
-   }
-
-   // In the switch statement:
-   case 3:
-       print("Result: \(multiply(num1, num2))")
-   case 4:
-       print("Result: \(divide(num1, num2))")
-   ```
-2. Commit your changes:
-   ```bash
-   git add calculator.swift
-   git commit -m "Added multiplication and division functions"
-   ```
-
-### **Step 4: Partner 3 - Exponent and Remainder**
-1. On your branch, implement the **exponent** and **remainder** functions:
-   ```swift
-   func exponent(_ base: Double, _ power: Double) -> Double {
-       return pow(base, power)
-   }
-
-   func remainder(_ a: Double, _ b: Double) -> Double {
-       return a.truncatingRemainder(dividingBy: b)
-   }
-
-   // In the switch statement:
-   case 5:
-       print("Result: \(exponent(num1, num2))")
-   case 6:
-       print("Result: \(remainder(num1, num2))")
-   ```
-2. Commit your changes:
-   ```bash
-   git add calculator.swift
-   git commit -m "Added exponent and remainder functions"
-   ```
+Invalid input. Please enter valid numbers
+```
 
 ---
 
@@ -201,10 +141,11 @@ Result: 5.0
 ## **4. Submitting Your Work**
 
 1. Make sure your final version is pushed to the main branch of the repository.
-2. Call your instructor to check that the repository contains:
+2. Do not push your executable
+3. Call me to check that the repository contains:
    - **Working calculator functions** for all operations.
    - **Correctly merged code** from all partners.
-3. Your instructor will verify your repository on GitHub.
+4. I will ask you to demo your code in the terminal
 
 ---
 
@@ -212,5 +153,3 @@ Result: 5.0
 You've successfully collaborated using GitHub, implemented a simple calculator in Swift, and managed branches to organize your work. 🎉
 
 ---
-
-This version is a complete step-by-step lab that includes repository creation, branching, merging, the entire calculator code, and submission instructions for your students.
