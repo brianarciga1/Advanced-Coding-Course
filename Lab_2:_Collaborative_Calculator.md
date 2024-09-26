@@ -54,7 +54,7 @@ In this lab, your group will:
 ### **Calculator Requirements**
 The program will allow users to select an operation (add, subtract, multiply, divide, exponent, remainder) and then enter two numbers. Based on the operation chosen, it will perform the calculation and return the result.
 
-### **Common Code (Main Menu)**
+### **Step 1: Common Code (Main Menu)**
 
 Each team needs to include the following code to display the menu in their `calculator.swift` file:
 ```swift
@@ -112,6 +112,30 @@ a //user entered operation
 Invalid input. Please enter valid numbers
 ```
 
+### **Step 2: Partner 1 - Addition and Subtraction**
+1. On your branch, implement the **addition** and **subtraction** functions:
+2. Commit your changes:
+   ```bash
+   git add calculator.swift
+   git commit -m "Added addition and subtraction functions"
+   ```
+
+### **Step 3: Partner 2 - Multiplication and Division**
+1. On your branch, implement the **multiplication** and **division** functions:
+2. Commit your changes:
+   ```bash
+   git add calculator.swift
+   git commit -m "Added multiplication and division functions"
+   ```
+
+### **Step 4: Partner 3 - Exponent and Remainder**
+1. On your branch, implement the **exponent** and **remainder** functions:
+2. Commit your changes:
+   ```bash
+   git add calculator.swift
+   git commit -m "Added exponent and remainder functions"
+   ```
+   
 ---
 
 ## **3. Merging and Finalizing the Program**
