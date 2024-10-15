@@ -44,7 +44,7 @@ In this lab, you and your partner will work together to create a simple counter 
    swift package init --type executable
    ```
 
-Ensure Package.swift has a test target
+Type the ls command to see your files. You should have a new Package.swift file. Ensure Package.swift has a test target
 First, open your Package.swift file and ensure it has a test target. The Package.swift file should look something like this:
 
 ```swift
