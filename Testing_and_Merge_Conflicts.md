@@ -276,16 +276,16 @@ Make sure the testTarget is included with the correct naming!
 2. If everything is set up correctly, you should see the tests passing:
 
    ```bash
-   Test Suite 'All tests' started at 2024-10-14 10:00:00.
-  Test Suite 'repository_nameTests' started at 2024-10-14 10:00:00.
-  Test Case 'CounterTests.testIncrement' started.
-  Counter value after increment: 1
-  Test Case 'CounterTests.testIncrement' passed (0.001 seconds).
-  Test Case 'CounterTests.testDecrement' started.
-  Counter value after decrement: -1
-  Test Case 'CounterTests.testDecrement' passed (0.001 seconds).
-  Test Suite 'repository_nameTests' passed at 2024-10-14 10:00:00.
-  Executed 2 tests, with 0 failures in 0.002 seconds
+      Test Suite 'All tests' started at 2024-10-14 10:00:00.
+      Test Suite 'repository_nameTests' started at 2024-10-14 10:00:00.
+      Test Case 'CounterTests.testIncrement' started.
+      Counter value after increment: 1
+      Test Case 'CounterTests.testIncrement' passed (0.001 seconds)
+      Test Case 'CounterTests.testDecrement' started
+      Counter value after decrement: -1
+      Test Case 'CounterTests.testDecrement' passed (0.001 seconds).
+      Test Suite 'repository_nameTests' passed at 2024-10-14 10:00:00
+      Executed 2 tests, with 0 failures in 0.002 seconds
    ```
 
 ---
