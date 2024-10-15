@@ -88,11 +88,6 @@ Make sure the testTarget is included with the correct naming!
            └── repository-nameTests.swift
    ```
 
-   Run this command to verify the structure:
-   ```bash
-   tree
-   ```
-
    - **Package.swift**: This is the file that defines your package and its dependencies.
    - **Sources/**: This folder contains your application code.
    - **Tests/**: This folder contains your unit test files.
