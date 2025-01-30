@@ -43,6 +43,25 @@ The `style.css` file is used to style the webpage. Key elements include:
 4. Test your website in a browser.
 5. Commit and push your changes to GitHub.
 
+## Publishing with GitHub Pages
+To make your website live on the internet using GitHub Pages, follow these steps:
+
+1. **Go to Your Repository on GitHub**
+   - Open GitHub and navigate to your repository.
+
+2. **Enable GitHub Pages**
+   - Click on `Settings` in the repository.
+   - Scroll down to the `Pages` section.
+   - Under `Branch`, select `main` (or `master` if applicable) and click `Save`.
+
+3. **Wait for Deployment**
+   - GitHub will generate a live link for your project.
+   - Refresh the page if needed, and you will see the published URL.
+
+4. **Access Your Live Website**
+   - The link to your website will be displayed in the `GitHub Pages` section.
+   - Click on it to view your live site!
+
 ## Submission
 - Upload your project to a GitHub repository.
 - Submit the repository link for evaluation.
