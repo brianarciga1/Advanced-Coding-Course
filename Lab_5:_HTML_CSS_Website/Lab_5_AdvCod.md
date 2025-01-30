@@ -1,9 +1,26 @@
 # Web Development Lab Manual
 
-## Introduction
-This lab will guide you through creating a simple HTML and CSS website. You have the freedom to design it however you like, but the structure follows a common layout.
+## Overview
+In this lab, students will create a personal website using HTML and CSS. They have the freedom to design their website about any topic of their choice.
+
+## Provided Files
+- `index.html`: The main HTML file containing the structure of the webpage.
+- `style.css`: The CSS file responsible for styling the webpage.
 
 ## Understanding the HTML File
+The `index.html` file consists of essential elements such as:
+- `<!DOCTYPE html>`: Declares the document type as HTML5.
+- `<html lang="en">`: Defines the language of the document.
+- `<title>`: Sets the title of the webpage.
+- `<link rel="stylesheet" href="style.css">`: Links the CSS file for styling.
+- `<body>`: Contains all the visible content of the webpage.
+- `<div>`: Defines sections of the page.
+- `<nav>`: Represents the navigation bar.
+- `<ul>` and `<li>`: Used to create navigation menu lists.
+- `<a href="#">`: Defines hyperlinks.
+- `<h1>`, `<p>`: Headers and paragraphs for text content.
+- `<input>`: Used for user input fields in forms.
+- `<button>`: Clickable buttons.
 - `<head>`: Contains metadata, links to stylesheets, and the title of the webpage.
 - `<li>`: Defines a list item within an unordered list (`<ul>`) or ordered list (`<ol>`).
 - `<href>`: Attribute in an `<a>` tag that specifies the hyperlink reference.
@@ -11,11 +28,15 @@ This lab will guide you through creating a simple HTML and CSS website. You have
 - `<script>`: Used to include JavaScript files.
 
 ## Understanding the CSS File
-- `.main`: The main container for the webpage, including the background and overall layout.
-- `.navbar`: Defines the navigation bar, containing menu items and the website logo.
-- `.menu ul li`: Styles the menu items inside the navigation bar.
-- `.content`: Defines the main content area, including headings, paragraphs, and buttons.
-- `.form`: Styles the login form with input fields and buttons.
+The `style.css` file is used to style the webpage. Key elements include:
+- `* { margin: 0; padding: 0; }`: Resets default margins and padding.
+- `.main`: Styles the main container.
+- `.navbar`: Styles the navigation bar.
+- `.logo`: Defines the appearance of the website logo.
+- `.menu ul li a`: Styles the menu links.
+- `.content`: Styles the main text content.
+- `.form`: Styles the login form section.
+- `.btn`: Styles buttons.
 
 ## Steps to Preview HTML/CSS Files Using Xcode
 
@@ -32,10 +53,6 @@ This lab will guide you through creating a simple HTML and CSS website. You have
 
 ### Edit Files in Xcode:
 - You can now edit your HTML and CSS files directly in Xcode, just like you would in any text editor.
-
-### Locate Your Files for Preview:
-1. Right-click the `index.html` file in the Project Navigator and select **Show in Finder**.
-2. This will reveal the actual file location on your disk.
 
 ### Open Your HTML File in a Browser:
 1. In Finder, double-click the `index.html` file to open it in your default browser.
@@ -73,11 +90,20 @@ You can configure Xcode to open the HTML file in a browser with a shortcut:
 
 3. **Access Your Website**
    - After a few minutes, your website will be live at `https://yourusername.github.io/repository-name/`.
-   - Share the link with others to view your project online.
+   - Open the link to view your project online.
+
+## Task
+1. Modify `index.html` to personalize the content (customize it however you want!).
+2. Customize `style.css` to change colors, fonts, and layout.
+3. Add additional elements like images, new sections, or animations.
+4. Include atleast ONE animation (youtube and google are good resources)
+5. Test your website in a browser.
+6. Commit and push your changes to GitHub.
+7. Publish your site with GitHub Pages.
 
 # Submission
-- Upload your project to a GitHub repository.
-- Submit the repository link for evaluation.
-
+- Submit your website link in the comments
+- Submit a screenshot of your home page
+  
 Happy Coding!
 
