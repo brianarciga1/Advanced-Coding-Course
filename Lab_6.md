@@ -1,8 +1,3 @@
-Absolutely! Here's a version formatted as a `README.md` file you can copy directly into your GitHub repository:
-
----
-
-```markdown
 # 🚦 Smart Crosswalk Traffic Light System (Arduino Group Lab)
 
 ## 👥 Group Size
