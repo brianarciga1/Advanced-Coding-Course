@@ -1,7 +1,15 @@
+
+
+---
+
+```markdown
 # 🚦 Smart Crosswalk Traffic Light System (Arduino Group Lab)
 
 ## 👥 Group Size
 2 students
+
+## ⏱ Duration
+~4 hours
 
 ## 🎯 Objective
 Build a traffic light system with pedestrian control that:
@@ -110,3 +118,47 @@ void playTune() {
         delay(50);
     }
 }
+```
+
+---
+
+## 🎵 Melody Challenge
+
+🎶 Replace the values in `melody[]` with your own pattern of frequencies (Hz) or musical notes like `NOTE_C4`, `NOTE_D4`, etc.
+
+> Use this tone reference:  
+> [Arduino Tone Reference – Notes and Frequencies](https://www.arduino.cc/en/Tutorial/BuiltInExamples/toneMelody)
+
+---
+
+## ✅ Lab Checklist
+
+- [ ] Wire your circuit correctly.
+- [ ] Upload and run the code.
+- [ ] Replace the melody with your custom tune.
+- [ ] Ensure red, green, and yellow LEDs flash during pedestrian crossing.
+- [ ] Troubleshoot with your partner.
+
+---
+
+## 🧠 Reflection Questions
+
+1. Why do we use the `buttonPressed` flag?
+2. How does this prevent multiple triggers while the light is red?
+3. How could this be made more realistic using sensors or displays?
+
+---
+
+## 🛠 Bonus Extensions
+
+- Add a **walk countdown** using another LED or display.
+- Use an **LCD screen** to show "WALK" or "WAIT".
+- Experiment with **debouncing the button**.
+
+---
+
+```
+
+---
+
+Let me know if you'd like this in a downloadable `.md` file or packaged with a diagram too!
