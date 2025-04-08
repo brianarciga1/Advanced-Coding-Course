@@ -151,9 +151,3 @@ void playTune() {
 - Experiment with **debouncing the button**.
 
 ---
-
-```
-
----
-
-Let me know if you'd like this in a downloadable `.md` file or packaged with a diagram too!
