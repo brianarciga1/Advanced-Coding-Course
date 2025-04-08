@@ -3,9 +3,6 @@
 ## 👥 Group Size
 2 students
 
-## ⏱ Duration
-~4 hours
-
 ## 🎯 Objective
 Build a traffic light system with pedestrian control that:
 - Cycles through green, yellow, and red for vehicles.
