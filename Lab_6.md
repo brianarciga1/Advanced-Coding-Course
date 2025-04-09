@@ -3,9 +3,6 @@
 ## 👥 Group Size
 2 students
 
-## ⏱ Duration
-~4 hours
-
 ## 🎯 Objective
 Build a traffic light system with pedestrian control that:
 - Cycles through green, yellow, and red for vehicles.
@@ -26,6 +23,10 @@ Build a traffic light system with pedestrian control that:
 | Push Button      | 2           | Use 10kΩ pull-down resistor     |
 | Buzzer           | 8           | Connect negative leg to GND     |
 
+
+![image](https://github.com/user-attachments/assets/23bcf864-8648-4648-b998-17bed0c76109)
+
+
 ---
 
 ## 🧾 Starter Code
@@ -33,84 +34,89 @@ Build a traffic light system with pedestrian control that:
 Paste this code into your Arduino IDE to get started:
 
 ```cpp
-int redLED = 9;
-int yellowLED = 10;
-int greenLED = 11;
-int pedestrianLED = 12;
-int buttonPin = 2;
-int buzzerPin = 8;
+int redLED = 9;                
+int yellowLED = 10;            
+int greenLED = 11;             
+int pedestrianLED = 12;        
+int buttonPin = 2;             
+int buzzerPin = 8;             
 
-bool buttonPressed = false;
+bool buttonPressed = false;   // Track if the button has been pressed
 
 void setup() {
-    pinMode(redLED, OUTPUT);
-    pinMode(yellowLED, OUTPUT);
-    pinMode(greenLED, OUTPUT);
-    pinMode(pedestrianLED, OUTPUT);
+    pinMode(redLED, OUTPUT);     
+    pinMode(yellowLED, OUTPUT);  
+    pinMode(greenLED, OUTPUT);   
+    pinMode(pedestrianLED, OUTPUT);  
     pinMode(buzzerPin, OUTPUT);
-    pinMode(buttonPin, INPUT);
     
-    digitalWrite(greenLED, HIGH);  // Start with green
+    pinMode(buttonPin, INPUT);
+    digitalWrite(greenLED, HIGH);  // Start with the green light
 }
 
 void loop() {
-    if (digitalRead(buttonPin) == HIGH && !buttonPressed) {
-        buttonPressed = true;
+    if (digitalRead(buttonPin) == HIGH && !buttonPressed) {  
+        buttonPressed = true;  // Register button press to avoid multiple triggers
 
-        digitalWrite(greenLED, LOW);
-        digitalWrite(yellowLED, LOW);
-        digitalWrite(redLED, HIGH);
-        digitalWrite(pedestrianLED, HIGH);
+        // Turn off green light, turn on red and pedestrian light
+        digitalWrite(greenLED, LOW);        
+        digitalWrite(yellowLED, LOW);       
+        digitalWrite(redLED, HIGH);         
+        digitalWrite(pedestrianLED, HIGH);  
 
+        // Play a short tune on the buzzer
         playTune();
 
-        for (int i = 0; i < 5; i++) {
-            digitalWrite(greenLED, HIGH);
-            digitalWrite(redLED, LOW);
-            delay(300);
-            digitalWrite(greenLED, LOW);
-            digitalWrite(redLED, HIGH);
-            delay(300);
-        }
+        // Pedestrian crossing delay
+        delay(3000);  
 
+        // Flash yellow before switching back
         for (int i = 0; i < 5; i++) {
             digitalWrite(yellowLED, HIGH);
-            delay(300);
+            delay(500);
             digitalWrite(yellowLED, LOW);
-            delay(300);
+            delay(500);
         }
 
+        // Reset lights: back to green
         digitalWrite(redLED, LOW);
         digitalWrite(greenLED, HIGH);
         digitalWrite(pedestrianLED, LOW);
 
-        delay(500);
-        buttonPressed = false;
+        delay(500);  // Small delay before allowing another button press
+        buttonPressed = false;  // Reset button state
     }
 
+    // Normal traffic cycle (if no button is pressed)
     if (!buttonPressed) {
-        delay(5000);
+        delay(5000);  // Green light stays on
+
+        // Green → Yellow
         digitalWrite(greenLED, LOW);
         digitalWrite(yellowLED, HIGH);
         delay(2000);
+
+        // Yellow → Red
         digitalWrite(yellowLED, LOW);
         digitalWrite(redLED, HIGH);
         delay(5000);
+
+        // Red → Green
         digitalWrite(redLED, LOW);
         digitalWrite(greenLED, HIGH);
     }
 }
 
+// Function to play a short tune on the buzzer
 void playTune() {
-    // Replace this with your own melody!
-    int melody[] = { 440, 494, 523, 587, 659 };
-    int noteDuration = 300;
+    int melody[] = {1000, 1200, 1400, 1200, 1000}; // Simple beep sequence
+    int noteDuration = 300;  // Duration of each note in milliseconds
 
     for (int i = 0; i < 5; i++) {
         tone(buzzerPin, melody[i]);
         delay(noteDuration);
         noTone(buzzerPin);
-        delay(50);
+        delay(50);  // Small pause between notes
     }
 }
 ```
@@ -138,16 +144,7 @@ void playTune() {
 
 ## 🧠 Reflection Questions
 
-1. Why do we use the `buttonPressed` flag?
-2. How does this prevent multiple triggers while the light is red?
-3. How could this be made more realistic using sensors or displays?
-
----
-
-## 🛠 Bonus Extensions
-
-- Add a **walk countdown** using another LED or display.
-- Use an **LCD screen** to show "WALK" or "WAIT".
-- Experiment with **debouncing the button**.
+1. What are the advantages and disadvantages of using a push-button system versus using sensors or automated timers for pedestrian crossings?
+2. What improvements would you make to this current system?
 
 ---
