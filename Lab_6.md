@@ -1,4 +1,4 @@
-# 🚦 Smart Crosswalk Traffic Light System (Arduino Group Lab)
+# 🚦 Lab 6: Smart Crosswalk Traffic Light System (Arduino Lab)
 
 ## 👥 Group Size
 2 students
@@ -11,7 +11,23 @@ Build a traffic light system with pedestrian control that:
 - Flashes **green, red, and yellow** lights for pedestrian safety.
 
 ---
+## What the Code Does
 
+# Initial Setup
+    Traffic starts with a green light on.
+    Pin modes are set for inputs (button) and outputs (LEDs and buzzer).
+# When Button Is Pressed
+    Turns off the green light.
+    Turns on the red light and pedestrian light.
+    Plays a short melody on the buzzer for crossing indication.
+    Waits 3 seconds for pedestrian crossing.
+    Flashes yellow light 5 times as a warning.
+    Switches back to green for traffic.
+# No Button Press?
+    Runs a default traffic cycle: green → yellow → red → green.
+
+
+---
 ## 🔌 Wiring Guide
 
 | Component        | Arduino Pin | Notes                          |
